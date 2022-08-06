@@ -1,5 +1,6 @@
 package com.yuda.book.springboot.domain.posts;
 
+import com.yuda.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 실제 DB테이블과 연결될 테이블임을 선언
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id // PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙
     private Long id;
@@ -27,5 +28,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
