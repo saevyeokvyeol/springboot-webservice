@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing // JPA Auditing 활성화
 @SpringBootApplication
 public class Application {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // SpringApplicationApplication.run(): 내장 WAS 실행
         SpringApplication.run(Application.class, args);
     }
