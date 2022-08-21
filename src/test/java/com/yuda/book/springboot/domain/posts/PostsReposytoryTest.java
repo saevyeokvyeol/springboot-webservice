@@ -45,6 +45,5 @@ public class PostsReposytoryTest {
         Posts posts = postsList.get(0);
         Assertions.assertThat(posts.getTitle()).isEqualTo(title);
         Assertions.assertThat(posts.getContent()).isEqualTo(content);
-
     }
 }
